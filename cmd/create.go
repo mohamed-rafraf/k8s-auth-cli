@@ -1,6 +1,5 @@
 /*
 Copyright © 2023 NAME HERE <EMAIL ADDRESS>
-
 */
 package cmd
 
@@ -18,7 +17,7 @@ var createCmd = &cobra.Command{
 This command allow you to create clusters, groups and users. But keep in mind that you need to be authorized!
 In other words only admins can use this command!`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("create called")
+		fmt.Println(cmd.Long)
 	},
 }
 

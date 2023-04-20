@@ -16,7 +16,7 @@ var deleteCmd = &cobra.Command{
 	Long: `This command allow you to delete users, groups, and clusters!
 Keep in mind that you must be authorized! In Other words you must be an admin`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("delete called")
+		fmt.Println(cmd.Long)
 	},
 }
 

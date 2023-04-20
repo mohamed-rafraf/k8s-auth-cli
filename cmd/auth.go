@@ -27,7 +27,10 @@ Once you are authorized, you'll be authenticated and a kubeconfig file will be g
 			fmt.Println("specify the cluster")
 			return
 		}
-
+		if cluster == "" {
+			fmt.Println(cmd.Long)
+			return
+		}
 		token, _ := readConfigFile()
 		url := server + "/auth?cluster=" + cluster
 

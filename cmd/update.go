@@ -18,7 +18,7 @@ Example:
   k8s-auth update permission --cluster ctf-cluster --group dev --file RBAC.yaml
   k8s-auth update permission --cluster ctf-cluster --user mohamedrafraf@gmail.com --file RBAC.yaml`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("update called")
+		fmt.Println(cmd.Long)
 	},
 }
 
