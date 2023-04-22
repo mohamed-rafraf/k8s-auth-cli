@@ -4,8 +4,6 @@ Copyright © 2023 NAME HERE <EMAIL ADDRESS>
 package cmd
 
 import (
-	"fmt"
-
 	"github.com/spf13/cobra"
 )
 
@@ -16,7 +14,7 @@ var deleteCmd = &cobra.Command{
 	Long: `This command allow you to delete users, groups, and clusters!
 Keep in mind that you must be authorized! In Other words you must be an admin`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println(cmd.Long)
+		cmd.Help()
 	},
 }
 

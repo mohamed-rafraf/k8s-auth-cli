@@ -92,6 +92,6 @@ func init() {
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
 	// authCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
-	authCmd.Flags().String("server", Config.Server, "Server that you want to deal with")
+	//authCmd.Flags().String("server", Config.Server, "Server that you want to deal with")
 	authCmd.Flags().String("cluster", "", "Server that you want to deal with")
 }

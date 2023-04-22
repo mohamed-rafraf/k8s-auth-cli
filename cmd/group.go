@@ -173,9 +173,7 @@ func init() {
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
 	// groupCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
-	groupDeleteCmd.Flags().String("server", Config.Server, "Server that you want to deal with")
 	groupDeleteCmd.Flags().String("cluster", "", "Server that you want to deal with")
-	groupCmd.Flags().String("server", Config.Server, "Server that you want to deal with")
 	groupCmd.Flags().String("cluster", "", "Server that you want to deal with")
 	groupCmd.Flags().String("file", "", "Server that you want to deal with")
 

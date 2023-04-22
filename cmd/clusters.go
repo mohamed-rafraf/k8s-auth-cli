@@ -100,5 +100,4 @@ func init() {
 	// clustersCmd.PersistentFlags().String("foo", "", "A help for foo")
 	// clustersCmd.PersistentFlags().String("foo", "", "A help for foo")
 
-	clustersCmd.Flags().String("server", Config.Server, "Server that you want to deal with")
 }

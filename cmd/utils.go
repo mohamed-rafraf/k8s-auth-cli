@@ -80,7 +80,7 @@ func GenerateKubeConfiguration(token, cacrt, cluster, apiserver string) error {
 	configFile := filepath.Join(currentUser.HomeDir, ".k8s-auth.config")
 
 	// Open the config file
-	file, err := os.Open(configFile)
+	file, err := os.OpenFile(configFile, os.O_WRONLY|os.O_CREATE, 0644)
 	if err != nil {
 		return err
 	}

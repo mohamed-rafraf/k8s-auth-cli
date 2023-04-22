@@ -220,11 +220,9 @@ func init() {
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
 	// permissionCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
-	getPermissionCmd.Flags().String("server", Config.Server, "Server that you want to deal with")
 	getPermissionCmd.Flags().String("cluster", "", "Select the cluster that you want to check it ")
 	getPermissionCmd.Flags().String("user", "", "The mail of user")
 	getPermissionCmd.Flags().String("group", "", "The group of user")
-	updatePermissionCmd.Flags().String("server", Config.Server, "Server that you want to deal with")
 	updatePermissionCmd.Flags().String("cluster", "", "Select the cluster that you want to check it ")
 	updatePermissionCmd.Flags().String("user", "", "The mail of user")
 	updatePermissionCmd.Flags().String("group", "", "The group of user")

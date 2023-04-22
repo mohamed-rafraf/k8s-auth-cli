@@ -12,7 +12,7 @@ import (
 
 type config struct {
 	Home   string `env:"HOME"`
-	Server string `env:"K8S-AUTH-SERVER" envDefault:"http://localhost:8080"`
+	Server string `env:"K8S_AUTH_SERVER" envDefault:"http://localhost:8080"`
 }
 
 var Config config
@@ -42,14 +42,14 @@ func Execute() {
 }
 
 func init() {
+	// Here you will define your flags and configuration settings.
+	// Cobra supports persistent flags, which, if defined here,
+	// will be global for your application.
 	err := InitConfig()
 	if err != nil {
 		os.Exit(1)
 	}
-	// Here you will define your flags and configuration settings.
-	// Cobra supports persistent flags, which, if defined here,
-	// will be global for your application.
-
+	rootCmd.PersistentFlags().String("server", Config.Server, "A help for foo")
 	// rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.k8s-auth.yaml)")
 
 	// Cobra also supports local flags, which will only run

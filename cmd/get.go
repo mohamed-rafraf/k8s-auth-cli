@@ -4,8 +4,6 @@ Copyright © 2023 NAME HERE <EMAIL ADDRESS>
 package cmd
 
 import (
-	"fmt"
-
 	"github.com/spf13/cobra"
 )
 
@@ -16,7 +14,7 @@ var getCmd = &cobra.Command{
 	Long: `This command allow you to list/get users, groups and clusters!
 This command will behave based on the authorization of user (normal user or admin)`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println(cmd.Long)
+		cmd.Help()
 	},
 }
 
